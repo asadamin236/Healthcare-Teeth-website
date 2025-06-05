@@ -1,11 +1,11 @@
-// src/components/Navbar.jsx
+// Navbar.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; // Custom styles for fixed navbar
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg shadow-sm custom-navbar">
+    <nav className="navbar navbar-expand-lg shadow-sm custom-navbar bg-white">
       <div className="container-fluid">
         <Link className="navbar-brand fw-bold" to="/">
           MediLab
@@ -22,7 +22,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse text-left" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
               <Link className="nav-link" to="/">
                 Home
@@ -47,6 +47,15 @@ const Navbar = () => {
               <Link className="nav-link" to="/contact">
                 Contact
               </Link>
+            </li>
+            <li className="nav-item ms-lg-3">
+              <button
+                className="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#appointmentModal"
+              >
+                Book Appointment
+              </button>
             </li>
           </ul>
         </div>
