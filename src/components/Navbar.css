@@ -1,0 +1,45 @@
+/* Navbar.css */
+
+.custom-navbar {
+  position: fixed !important; /* Fix it at the top of viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* fixed navbar height */
+  z-index: 1200; /* on top of other content */
+  background-color: white; /* or your navbar background */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Collapse menu: position absolute below navbar */
+#navbarNav {
+  position: absolute;
+  top: 60px; /* same as navbar height */
+  right: 0;
+  left: 0;
+  background-color: white; /* Or your navbar bg color */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 0.25rem 0.25rem;
+  z-index: 1029; /* just below navbar */
+}
+
+/* Show the collapse menu with animation */
+.collapse.show {
+  display: block !important;
+}
+
+/* Optional: spacing inside collapse menu */
+.navbar-nav {
+  padding: 0.5rem 1rem;
+}
+
+/* Hide collapse menu on larger screens (Bootstrap handles this normally) */
+@media(min-width: 992px) {
+  #navbarNav {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+}

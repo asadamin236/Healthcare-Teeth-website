@@ -1,0 +1,43 @@
+.custom-stats-section .stats-border-box {
+  position: relative;
+  padding: 50px 20px 30px; /* Top padding for icon space */
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background: #fff;
+  margin-top: 40px;
+  text-align: center;
+}
+.containers {
+  margin-top: 100px;
+}
+.custom-stats-section .icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f8f9fa;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.custom-stats-section .icon-wrapper i {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.custom-stats-section .stats-item-content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.custom-stats-section .stats-item-content p {
+  font-size: 1rem;
+  margin: 0;
+}
