@@ -18,14 +18,18 @@ function Contact() {
     e.preventDefault();
 
     const scriptURL = import.meta.env.VITE_SHEETBEST_URL1;
-    const apiKey = import.meta.env.VITE_SHEETBEST_API_KEY1; // Optional for private sheets
+    const apiKey = import.meta.env.VITE_SHEETBEST_API_KEY1;
+
+    console.log("Sending data to:", scriptURL);
+    console.log("Form Data:", formData);
+    console.log("Using API Key:", apiKey);
 
     try {
       const response = await fetch(scriptURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(apiKey && { Authorization: `Bearer ${apiKey}` }), // Include auth if needed
+          Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify(formData),
       });
