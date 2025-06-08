@@ -1,44 +1,60 @@
-import React from "react";
+import { useState } from "react";
+import { FaTooth, FaSmile, FaMedkit, FaXRay, FaTeeth } from "react-icons/fa";
+import "./Services.css";
+
+const services = [
+  {
+    id: 1,
+    icon: <FaTooth />,
+    title: "General Dentistry",
+    description: "Routine checkups, cleanings, and oral exams.",
+  },
+  {
+    id: 2,
+    icon: <FaSmile />,
+    title: "Cosmetic Dentistry",
+    description: "Whitening, veneers, and smile makeovers.",
+  },
+  {
+    id: 3,
+    icon: <FaMedkit />,
+    title: "Emergency Care",
+    description: "Immediate treatment for dental emergencies.",
+  },
+  {
+    id: 4,
+    icon: <FaXRay />,
+    title: "Dental X-Rays",
+    description: "Accurate imaging for proper diagnosis and treatment.",
+  },
+  {
+    id: 5,
+    icon: <FaTeeth />,
+    title: "Orthodontics",
+    description: "Braces and aligners for teeth straightening.",
+  },
+];
 
 const Services = () => {
-  const services = [
-    {
-      title: "Cardiology",
-      icon: "🫀",
-      desc: "Expert heart care and diagnostics.",
-    },
-    {
-      title: "Neurology",
-      icon: "🧠",
-      desc: "Brain and nervous system treatment.",
-    },
-    {
-      title: "Pediatrics",
-      icon: "🧒",
-      desc: "Children's health and wellness.",
-    },
-    { title: "Orthopedics", icon: "🦴", desc: "Bone and joint care." },
-  ];
+  const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <section id="services" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-4">Our Services</h2>
-        <div className="row">
-          {services.map((service, idx) => (
-            <div key={idx} className="col-md-6 col-lg-3 mb-4">
-              <div className="card text-center h-100 shadow-sm">
-                <div className="card-body">
-                  <div className="display-4">{service.icon}</div>
-                  <h5 className="card-title mt-3">{service.title}</h5>
-                  <p className="card-text">{service.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+    <div className="services-container">
+      {services.map((service) => (
+        <div
+          key={service.id}
+          className={`service-card ${
+            hoveredId === service.id ? "hovered" : ""
+          }`}
+          onMouseEnter={() => setHoveredId(service.id)}
+          onMouseLeave={() => setHoveredId(null)}
+        >
+          <div className="icon">{service.icon}</div>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 

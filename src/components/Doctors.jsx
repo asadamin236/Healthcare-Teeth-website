@@ -1,4 +1,5 @@
 import React from "react";
+import "./Doctors.css";
 
 const doctorsData = [
   {
@@ -17,7 +18,7 @@ const doctorsData = [
     description:
       "Provides gentle dental care for children using the latest pain-free techniques.",
     image:
-      "https://imgs.search.brave.com/ofjLiW56XIQG7Gq5UN3yVQq6dpd95RJwFcPZYkcDQWQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQz/NDY4NzQxMC9waG90/by9wb3J0cmFpdC1v/Zi1oYXBweS1hbmQt/c3VjY2Vzc2Z1bC1h/ZnJpY2FuLWFtZXJp/Y2FuLWRvY3Rvci1t/YW4td29ya2luZy1p/bnNpZGUtb2ZmaWNl/LWNsaW5pYy5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9a0t2/VW16a290TjNGcldU/R2dTM2FyMm1tNFNM/d2xWM2NiaU5DLUJw/MTJZST0",
+      "https://th.bing.com/th/id/R.9ef38bbdcb39be4ad8569caf8ea21fec?rik=OaIiNv0Rcmn8pA&pid=ImgRaw&r=0",
   },
   {
     id: 3,
@@ -26,7 +27,25 @@ const doctorsData = [
     description:
       "Expert in gum disease treatment and oral inflammation management.",
     image:
-      "https://imgs.search.brave.com/q2tn1O2jCcrHXbwzTaSlqOZ8KSa2TdkEcdiBSk08mNQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM1/NzUyMjI3MC9waG90/by9zaG90LW9mLWEt/YmVhdXRpZnVsLXlv/dW5nLWRvY3Rvci1p/bi1oZXItb2ZmaWNl/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1BMjgteWUwdHlr/N0hTSW83T3ZqcUtP/MmRBX19BU3dQUXJm/QzZpWTZwLTNZPQ",
+      "https://th.bing.com/th/id/OIP.nU1sCXJ3v_5M488dWowkNQHaE7?r=0&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 4,
+    name: "Dr. Haris Qureshi",
+    specialty: "Orthodontist",
+    description:
+      "Specialist in braces, aligners, and jaw alignment treatments.",
+    image:
+      "https://img.lovepik.com/free-png/20220414/lovepik-dental-clinic-male-doctor-png-image_402146916_wh300.png",
+  },
+  {
+    id: 5,
+    name: "Dr. Anaya Rehman",
+    specialty: "Endodontist",
+    description:
+      "Focused on root canal therapies and preserving natural teeth.",
+    image:
+      "https://th.bing.com/th/id/R.e7ec296656c809afebd5099a4f52ee0d?rik=%2beW7BrQsRSzucQ&pid=ImgRaw&r=0",
   },
 ];
 
@@ -34,41 +53,23 @@ const Doctors = () => {
   return (
     <section id="doctors" className="py-5 bg-light">
       <div className="container">
-        <h2 className="text-center mb-3">Our Doctors</h2>
-        <p className="text-center mb-4">
-          Meet our expert team of dental specialists.
+        <h2 className="text-center mb-3">Meet Our Dental Experts</h2>
+        <p className="text-center mb-5 text-muted">
+          Highly qualified and compassionate dental professionals.
         </p>
-        <div className="row">
+
+        <div className="row g-4">
           {doctorsData.map((doc) => (
-            <div
-              key={doc.id}
-              className="col-md-4 mb-4"
-              style={{ cursur: "pointer" }}
-            >
-              <div className="card h-100">
-                <div className="row g-0 align-items-center">
-                  <div className="col-4">
-                    <img
-                      src={doc.image}
-                      className="img-fluid rounded-start"
-                      alt={doc.name}
-                      style={{
-                        height: "100%",
-                        objectFit: "cover",
-                        borderRadius: "100%",
-                      }}
-                    />
-                  </div>
-                  <div className="col-8">
-                    <div className="card-body">
-                      <h5 className="card-title">{doc.name}</h5>
-                      <p className="card-text">
-                        <strong>{doc.specialty}</strong>
-                      </p>
-                      <p className="card-text">{doc.description}</p>
-                    </div>
-                  </div>
-                </div>
+            <div key={doc.id} className="col-md-6 col-lg-4">
+              <div className="doctor-card h-100 shadow-sm rounded p-3 text-center bg-white">
+                <img
+                  src={doc.image}
+                  alt={doc.name}
+                  className="doctor-img mb-3"
+                />
+                <h5 className="fw-bold">{doc.name}</h5>
+                <p className="text-primary mb-1">{doc.specialty}</p>
+                <p className="text-muted small">{doc.description}</p>
               </div>
             </div>
           ))}

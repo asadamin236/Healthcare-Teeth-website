@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -8,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg shadow-sm custom-navbar bg-white">
       <div className="container-fluid">
         <Link className="navbar-brand fw-bold" to="/">
-          MediLab
+          Dental Health Care
         </Link>
         <button
           className="navbar-toggler"
@@ -24,7 +23,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse text-left" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="">
                 Home
               </Link>
             </li>
