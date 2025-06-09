@@ -39,21 +39,24 @@ const Services = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <div className="services-container">
-      {services.map((service) => (
-        <div
-          key={service.id}
-          className={`service-card ${
-            hoveredId === service.id ? "hovered" : ""
-          }`}
-          onMouseEnter={() => setHoveredId(service.id)}
-          onMouseLeave={() => setHoveredId(null)}
-        >
-          <div className="icon">{service.icon}</div>
-          <h3>{service.title}</h3>
-          <p>{service.description}</p>
-        </div>
-      ))}
+    <div className="services-container-wrapper">
+      <h2 className="text-center mb-4">Our Dental Services</h2>
+      <div className="services-container">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className={`service-card ${
+              hoveredId === service.id ? "hovered" : ""
+            }`}
+            onMouseEnter={() => setHoveredId(service.id)}
+            onMouseLeave={() => setHoveredId(null)}
+          >
+            <div className="icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
