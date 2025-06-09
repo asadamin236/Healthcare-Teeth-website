@@ -12,45 +12,62 @@ const About = () => {
               className="col-md-6 mb-4 mb-md-0"
               style={{ marginTop: "10px" }}
             >
-              <iframe
-                width="100%"
-                height="400px"
-                style={{ border: "2px solid black" }}
-                src="https://www.youtube.com/embed/Y7f98aduVJ8"
-                title="BootstrapMade Template Builder Overview"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+              <div
+                style={{
+                  position: "relative",
+                  paddingBottom: "56.25%",
+                  height: 0,
+                  overflow: "hidden",
+                  maxWidth: "100%",
+                  border: "2px solid #000",
+                }}
+              >
+                <iframe
+                  src="https://player.vimeo.com/video/288706316?h=f16be9d751"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Dental Health Care Video"
+                ></iframe>
+              </div>
             </div>
 
             {/* Right Column - About Content */}
             <div className="col-md-6">
               <h2 style={{ fontFamily: "Poppins, sans-serif" }}>About Us</h2>
               <h6 style={{ fontFamily: "Poppins, sans-serif" }}>
-                Dolor iure expedita id fuga asperiores qui sunt consequatur
-                minima. Quidem voluptas deleniti. Sit quia molestiae quia quas
-                qui magnam itaque veritatis dolores. Corrupti totam ut eius
-                incidunt reiciendis veritatis asperiores placeat.
+                At <strong>Dental Health Care</strong>, we’re dedicated to
+                providing gentle, high-quality dental services for families of
+                all ages. From routine cleanings to advanced cosmetic
+                procedures, our expert team uses modern equipment and a
+                compassionate approach to ensure your smile stays bright and
+                healthy. We believe that great dental care begins with trust,
+                comfort, and education.
               </h6>
 
-              {/* Icon Blocks */}
+              {/* Dental Icon Blocks */}
               {[
                 {
-                  icon: "fa-vial-circle-check",
-                  title: "Ullamco laboris nisi ut aliquip consequat",
-                  desc: "Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade",
+                  icon: "fa-tooth", // FontAwesome icon
+                  title: "Advanced Dental Technology",
+                  desc: "We use state-of-the-art tools to ensure pain-free and accurate dental care for all ages.",
                 },
                 {
-                  icon: "fa-pump-medical",
-                  title: "Magnam soluta odio exercitationem reprehenderi",
-                  desc: "Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi",
+                  icon: "fa-teeth-open",
+                  title: "Preventive Dental Care",
+                  desc: "Regular checkups, cleanings, and exams to maintain oral health and prevent dental problems.",
                 },
                 {
-                  icon: "fa-heart-circle-xmark",
-                  title: "Voluptatem et qui exercitationem",
-                  desc: "Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam",
+                  icon: "fa-user-doctor",
+                  title: "Skilled & Caring Dentists",
+                  desc: "Our expert team provides personalized treatment with a gentle touch and expert knowledge.",
                 },
               ].map((item, idx) => (
                 <div key={idx} style={{ marginTop: "40px" }}>
@@ -88,24 +105,36 @@ const About = () => {
       {/* Stats Section */}
       <section id="stats" className="py-5 bg-light custom-stats-section">
         <div className="container">
-          <div className="row gy-4 text-center">
-            {[
-              { icon: "fa-user-doctor", number: 85, label: "Doctors" },
-              { icon: "fa-hospital", number: 18, label: "Departments" },
-              { icon: "fa-flask", number: 12, label: "Research Labs" },
-            ].map((item, idx) => (
-              <div key={idx} className="col-lg-4 col-md-6 position-relative">
-                <div className="stats-border-box">
-                  <div className="icon-wrapper">
-                    <i className={`fa-solid ${item.icon}`}></i>
-                  </div>
-                  <div className="stats-item-content">
-                    <h3 className="purecounter">{item.number}</h3>
-                    <p>{item.label}</p>
+          <div className="container py-5">
+            <h2
+              className="text-center mb-4"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Why Choose Our Dental Clinic?
+            </h2>
+            <div className="row gy-4 text-center">
+              {[
+                { icon: "fa-tooth", number: 45, label: "Dental Experts" },
+                { icon: "fa-chair", number: 20, label: "Treatment Rooms" },
+                {
+                  icon: "fa-face-smile",
+                  number: 1200,
+                  label: "Happy Patients",
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="col-lg-4 col-md-6 position-relative">
+                  <div className="stats-border-box">
+                    <div className="icon-wrapper">
+                      <i className={`fa-solid ${item.icon}`}></i>
+                    </div>
+                    <div className="stats-item-content">
+                      <h3 className="purecounter">{item.number}</h3>
+                      <p>{item.label}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
