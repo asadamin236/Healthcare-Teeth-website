@@ -53,8 +53,16 @@ const Doctors = () => {
   return (
     <section id="doctors" className="py-5 bg-light">
       <div className="container">
-        <h2 className="text-center mb-3">Meet Our Dental Experts</h2>
-        <p className="text-center mb-5 text-muted">
+        <h2
+          className="text-center mb-3"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
+          Meet Our Dental Experts
+        </h2>
+        <p
+          className="text-center mb-5 text-muted"
+          style={{ fontFamily: "Poppins, sans-serif" }}
+        >
           Highly qualified and compassionate dental professionals.
         </p>
 
@@ -67,9 +75,24 @@ const Doctors = () => {
                   alt={doc.name}
                   className="doctor-img mb-3"
                 />
-                <h5 className="fw-bold">{doc.name}</h5>
-                <p className="text-primary mb-1">{doc.specialty}</p>
-                <p className="text-muted small">{doc.description}</p>
+                <h5
+                  className="fw-bold"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                  {doc.name}
+                </h5>
+                <p
+                  className="text-primary mb-1"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                  {doc.specialty}
+                </p>
+                <p
+                  className="text-muted small"
+                  style={{ fontFamily: "Poppins, sans-serif" }}
+                >
+                  {doc.description}
+                </p>
               </div>
             </div>
           ))}

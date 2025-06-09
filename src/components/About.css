@@ -10,6 +10,16 @@
 .containers {
   margin-top: 100px;
 }
+* {
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  font-family: 'Poppins', sans-serif;
+}
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
 .custom-stats-section .icon-wrapper {
   position: absolute;
   top: 0;

@@ -14,7 +14,12 @@ const Footer = () => {
         <div className="row">
           {/* Column 1 - Company Info */}
           <div className="col-md-3 mb-4">
-            <h5 className="fw-bold">Medilab</h5>
+            <h5
+              className="fw-bold"
+              style={{ fontFamily: "Poppins, sans-serif" }}
+            >
+              Dental Health Care
+            </h5>
             <p>
               A108 Adam Street
               <br />
