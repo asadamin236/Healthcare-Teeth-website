@@ -51,3 +51,13 @@ p {
   font-size: 1rem;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .containers {
+    text-align: center;
+  }
+
+  .containers iframe {
+    margin-bottom: 20px;
+  }
+}

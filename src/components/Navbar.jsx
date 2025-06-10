@@ -1,3 +1,4 @@
+// src/components/Navbar.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -23,7 +24,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse text-left" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-lg-center">
             <li className="nav-item">
-              <Link className="nav-link" to="">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>

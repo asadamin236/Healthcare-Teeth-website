@@ -1,3 +1,4 @@
+// src/components/Services.jsx
 import { useState } from "react";
 import { FaTooth, FaSmile, FaMedkit, FaXRay, FaTeeth } from "react-icons/fa";
 import "./Services.css";
@@ -39,8 +40,9 @@ const Services = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
-    <div className="services-container-wrapper">
-      <h2 className="text-center mb-4">Our Dental Services</h2>
+    <div id="services" className="services-container-wrapper text-center">
+      <h2 className="mb-5">Our Dental Services</h2>
+
       <div className="services-container">
         {services.map((service) => (
           <div

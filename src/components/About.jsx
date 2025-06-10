@@ -4,21 +4,19 @@ import "./About.css";
 const About = () => {
   return (
     <>
+      {/* About Section */}
       <section id="about" className="py-5 containers">
         <div className="container">
           <div className="row align-items-center">
             {/* Left Column - Video */}
-            <div
-              className="col-md-6 mb-4 mb-md-0"
-              style={{ marginTop: "10px" }}
-            >
+            <div className="col-md-6 mb-4 mb-md-0">
               <div
                 style={{
                   position: "relative",
                   paddingBottom: "56.25%",
                   height: 0,
                   overflow: "hidden",
-                  maxWidth: "100%",
+                  width: "100%",
                   border: "2px solid #000",
                 }}
               >
@@ -41,7 +39,12 @@ const About = () => {
 
             {/* Right Column - About Content */}
             <div className="col-md-6">
-              <h2 style={{ fontFamily: "Poppins, sans-serif" }}>About Us</h2>
+              <h2
+                className="mb-3"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+              >
+                About Us
+              </h2>
               <h6 style={{ fontFamily: "Poppins, sans-serif" }}>
                 At <strong>Dental Health Care</strong>, we’re dedicated to
                 providing gentle, high-quality dental services for families of
@@ -52,10 +55,10 @@ const About = () => {
                 comfort, and education.
               </h6>
 
-              {/* Dental Icon Blocks */}
+              {/* Icon Highlights */}
               {[
                 {
-                  icon: "fa-tooth", // FontAwesome icon
+                  icon: "fa-tooth",
                   title: "Advanced Dental Technology",
                   desc: "We use state-of-the-art tools to ensure pain-free and accurate dental care for all ages.",
                 },
@@ -70,31 +73,24 @@ const About = () => {
                   desc: "Our expert team provides personalized treatment with a gentle touch and expert knowledge.",
                 },
               ].map((item, idx) => (
-                <div key={idx} style={{ marginTop: "40px" }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "15px",
-                    }}
-                  >
-                    <i
-                      className={`fa-solid ${item.icon}`}
-                      style={{ fontSize: "3rem", color: "blue" }}
-                    />
-                    <b style={{ fontFamily: "Poppins, sans-serif" }}>
+                <div key={idx} className="d-flex align-items-start mt-4">
+                  <i
+                    className={`fa-solid ${item.icon} me-3`}
+                    style={{ fontSize: "2rem", color: "blue" }}
+                  ></i>
+                  <div>
+                    <strong style={{ fontFamily: "Poppins, sans-serif" }}>
                       {item.title}
-                    </b>
+                    </strong>
+                    <h6
+                      style={{
+                        fontFamily: "Poppins, sans-serif",
+                        marginTop: "5px",
+                      }}
+                    >
+                      {item.desc}
+                    </h6>
                   </div>
-                  <h6
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      marginTop: "10px",
-                      marginLeft: "60px",
-                    }}
-                  >
-                    {item.desc}
-                  </h6>
                 </div>
               ))}
             </div>
@@ -105,36 +101,30 @@ const About = () => {
       {/* Stats Section */}
       <section id="stats" className="py-5 bg-light custom-stats-section">
         <div className="container">
-          <div className="container py-5">
-            <h2
-              className="text-center mb-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
-              Why Choose Our Dental Clinic?
-            </h2>
-            <div className="row gy-4 text-center">
-              {[
-                { icon: "fa-tooth", number: 45, label: "Dental Experts" },
-                { icon: "fa-chair", number: 20, label: "Treatment Rooms" },
-                {
-                  icon: "fa-face-smile",
-                  number: 1200,
-                  label: "Happy Patients",
-                },
-              ].map((item, idx) => (
-                <div key={idx} className="col-lg-4 col-md-6 position-relative">
-                  <div className="stats-border-box">
-                    <div className="icon-wrapper">
-                      <i className={`fa-solid ${item.icon}`}></i>
-                    </div>
-                    <div className="stats-item-content">
-                      <h3 className="purecounter">{item.number}</h3>
-                      <p>{item.label}</p>
-                    </div>
+          <h2
+            className="text-center mb-4"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            Why Choose Our Dental Clinic?
+          </h2>
+          <div className="row gy-4 text-center">
+            {[
+              { icon: "fa-tooth", number: 45, label: "Dental Experts" },
+              { icon: "fa-chair", number: 20, label: "Treatment Rooms" },
+              { icon: "fa-face-smile", number: 1200, label: "Happy Patients" },
+            ].map((item, idx) => (
+              <div key={idx} className="col-lg-4 col-md-6 position-relative">
+                <div className="stats-border-box">
+                  <div className="icon-wrapper">
+                    <i className={`fa-solid ${item.icon}`}></i>
+                  </div>
+                  <div className="stats-item-content">
+                    <h3 className="purecounter">{item.number}</h3>
+                    <p>{item.label}</p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
