@@ -1,18 +1,15 @@
 li a {
   text-decoration: none;
 }
-li {
-  font-family: 'Poppins', sans-serif;
-}
 
-p {
+footer {
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
-
-body {
-  font-family: 'Poppins', sans-serif;
+footer h5 {
+  font-weight: 600;
 }
-
-* {
+footer a {
   font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }

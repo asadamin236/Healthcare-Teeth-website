@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="bg-light text-dark pt-5">
       <div className="container">
         <div className="row">
-          {/* Column 1 - Company Info */}
+          {/* Column 1 - Clinic Info */}
           <div className="col-md-3 mb-4">
             <h5
               className="fw-bold"
@@ -21,15 +21,15 @@ const Footer = () => {
               Dental Health Care
             </h5>
             <p>
-              A108 Adam Street
+              A108 Smile Avenue
               <br />
               New York, NY 535022
             </p>
             <p>
-              <strong>Phone:</strong> +1 5589 55488 55
+              <strong>Phone:</strong> +1 800 123 4567
             </p>
             <p>
-              <strong>Email:</strong> info@example.com
+              <strong>Email:</strong> care@dentalhealth.com
             </p>
             <div className="d-flex gap-2">
               <a href="#" className="text-dark">
@@ -52,28 +52,28 @@ const Footer = () => {
             <h5 className="fw-bold">Useful Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-dark">
+                <a href="#home" className="text-dark">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  About us
+                <a href="#about" className="text-dark">
+                  About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
+                <a href="#services" className="text-dark">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  Terms of service
+                <a href="#doctors" className="text-dark">
+                  Our Dentists
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  Privacy policy
+                <a href="#contact" className="text-dark">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -81,63 +81,63 @@ const Footer = () => {
 
           {/* Column 3 - Our Services */}
           <div className="col-md-3 mb-4">
-            <h5 className="fw-bold">Our Services</h5>
+            <h5 className="fw-bold">Dental Services</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#" className="text-dark">
-                  Web Design
+                <a href="#services" className="text-dark">
+                  General Dentistry
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  Web Development
+                <a href="#services" className="text-dark">
+                  Cosmetic Dentistry
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  Product Management
+                <a href="#services" className="text-dark">
+                  Orthodontics
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  Marketing
+                <a href="#services" className="text-dark">
+                  Emergency Dental Care
                 </a>
               </li>
               <li>
-                <a href="#" className="text-dark">
-                  Graphic Design
+                <a href="#services" className="text-dark">
+                  Dental X-Rays
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4 - Extra Section */}
+          {/* Column 4 - Patient Resources */}
           <div className="col-md-3 mb-4">
-            <h5 className="fw-bold">Hic solutastep</h5>
+            <h5 className="fw-bold">Patient Resources</h5>
             <ul className="list-unstyled">
               <li>
                 <a href="#" className="text-dark">
-                  Molestiae accusamus iure
+                  Book Appointment
                 </a>
               </li>
               <li>
                 <a href="#" className="text-dark">
-                  Excepturi dignissimos
+                  Insurance Info
                 </a>
               </li>
               <li>
                 <a href="#" className="text-dark">
-                  Suscipit distinctio
+                  FAQs
                 </a>
               </li>
               <li>
                 <a href="#" className="text-dark">
-                  Dilecta
+                  Dental Blog
                 </a>
               </li>
               <li>
                 <a href="#" className="text-dark">
-                  Sit quas consectetur
+                  Patient Forms
                 </a>
               </li>
             </ul>
@@ -146,19 +146,31 @@ const Footer = () => {
 
         <hr />
 
-        <div className="text-center pb-3">
-          <p className="mb-1">
-            &copy; {new Date().getFullYear()} <strong>Medilab</strong>. All
-            Rights Reserved
+        <div
+          className="text-center pb-3"
+          style={{ fontFamily: "Poppins, sans-serif", fontSize: "15px" }}
+        >
+          <p className="mb-1" style={{ marginBottom: "5px" }}>
+            &copy; {new Date().getFullYear()}{" "}
+            <strong style={{ fontFamily: "Poppins, sans-serif" }}>
+              Dental Health Care
+            </strong>
+            . All Rights Reserved
           </p>
           <p className="mb-0">
-            Designed by{" "}
+            Designed with ❤️ by{" "}
             <a
-              href="https://bootstrapmade.com"
+              href="https://www.linkedin.com/in/asadamin/"
               target="_blank"
               rel="noopener noreferrer"
+              style={{
+                fontFamily: "Poppins, sans-serif",
+                color: "#0077b5", // LinkedIn blue
+                fontWeight: "500",
+                textDecoration: "none",
+              }}
             >
-              BootstrapMade
+              Asad Amin
             </a>
           </p>
         </div>
