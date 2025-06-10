@@ -1,6 +1,14 @@
-// src/components/Services.jsx
 import { useState } from "react";
-import { FaTooth, FaSmile, FaMedkit, FaXRay, FaTeeth } from "react-icons/fa";
+import {
+  FaTooth,
+  FaSmile,
+  FaMedkit,
+  FaXRay,
+  FaTeeth,
+  FaProcedures,
+  FaRegGrinStars,
+  FaUserShield,
+} from "react-icons/fa";
 import "./Services.css";
 
 const services = [
@@ -34,6 +42,24 @@ const services = [
     title: "Orthodontics",
     description: "Braces and aligners for teeth straightening.",
   },
+  {
+    id: 6,
+    icon: <FaProcedures />,
+    title: "Oral Surgery",
+    description: "Extractions, implants, and other minor surgical procedures.",
+  },
+  {
+    id: 7,
+    icon: <FaRegGrinStars />,
+    title: "Pediatric Dentistry",
+    description: "Gentle dental care tailored for children and teens.",
+  },
+  {
+    id: 8,
+    icon: <FaUserShield />,
+    title: "Gum Disease Treatment",
+    description: "Treatment for gingivitis and periodontal disease.",
+  },
 ];
 
 const Services = () => {
@@ -41,7 +67,7 @@ const Services = () => {
 
   return (
     <div id="services" className="services-container-wrapper text-center">
-      <h2 className="mb-5">Our Dental Services</h2>
+      <h2 className="mb-5 services-heading">Our Dental Services</h2>
 
       <div className="services-container">
         {services.map((service) => (

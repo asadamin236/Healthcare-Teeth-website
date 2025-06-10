@@ -1,14 +1,20 @@
 import React from "react";
+import {
+  FaTooth,
+  FaShieldAlt,
+  FaUserMd,
+  FaUserNurse,
+  FaChair,
+  FaSmile,
+} from "react-icons/fa";
 import "./About.css";
 
 const About = () => {
   return (
     <>
-      {/* About Section */}
       <section id="about" className="py-5 containers">
         <div className="container">
           <div className="row align-items-center">
-            {/* Left Column - Video */}
             <div className="col-md-6 mb-4 mb-md-0">
               <div
                 style={{
@@ -37,7 +43,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Right Column - About Content */}
             <div className="col-md-6">
               <h2
                 className="mb-3"
@@ -48,36 +53,28 @@ const About = () => {
               <h6 style={{ fontFamily: "Poppins, sans-serif" }}>
                 At <strong>Dental Health Care</strong>, we’re dedicated to
                 providing gentle, high-quality dental services for families of
-                all ages. From routine cleanings to advanced cosmetic
-                procedures, our expert team uses modern equipment and a
-                compassionate approach to ensure your smile stays bright and
-                healthy. We believe that great dental care begins with trust,
-                comfort, and education.
+                all ages...
               </h6>
 
-              {/* Icon Highlights */}
               {[
                 {
-                  icon: "fa-tooth",
+                  icon: <FaTooth size={32} color="blue" />,
                   title: "Advanced Dental Technology",
                   desc: "We use state-of-the-art tools to ensure pain-free and accurate dental care for all ages.",
                 },
                 {
-                  icon: "fa-teeth-open",
+                  icon: <FaShieldAlt size={32} color="blue" />,
                   title: "Preventive Dental Care",
                   desc: "Regular checkups, cleanings, and exams to maintain oral health and prevent dental problems.",
                 },
                 {
-                  icon: "fa-user-doctor",
+                  icon: <FaUserMd size={32} color="blue" />,
                   title: "Skilled & Caring Dentists",
                   desc: "Our expert team provides personalized treatment with a gentle touch and expert knowledge.",
                 },
               ].map((item, idx) => (
                 <div key={idx} className="d-flex align-items-start mt-4">
-                  <i
-                    className={`fa-solid ${item.icon} me-3`}
-                    style={{ fontSize: "2rem", color: "blue" }}
-                  ></i>
+                  <div className="me-3">{item.icon}</div>
                   <div>
                     <strong style={{ fontFamily: "Poppins, sans-serif" }}>
                       {item.title}
@@ -98,7 +95,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section id="stats" className="py-5 bg-light custom-stats-section">
         <div className="container">
           <h2
@@ -109,17 +105,27 @@ const About = () => {
           </h2>
           <div className="row gy-4 text-center">
             {[
-              { icon: "fa-tooth", number: 45, label: "Dental Experts" },
-              { icon: "fa-chair", number: 20, label: "Treatment Rooms" },
-              { icon: "fa-face-smile", number: 1200, label: "Happy Patients" },
+              {
+                icon: <FaUserNurse size={32} color="#007bff" />,
+                number: 45,
+                label: "Dental Experts",
+              },
+              {
+                icon: <FaChair size={32} color="#007bff" />,
+                number: 20,
+                label: "Treatment Rooms",
+              },
+              {
+                icon: <FaSmile size={32} color="#007bff" />,
+                number: 1200,
+                label: "Happy Patients",
+              },
             ].map((item, idx) => (
               <div key={idx} className="col-lg-4 col-md-6 position-relative">
                 <div className="stats-border-box">
-                  <div className="icon-wrapper">
-                    <i className={`fa-solid ${item.icon}`}></i>
-                  </div>
+                  <div className="icon-wrapper">{item.icon}</div>
                   <div className="stats-item-content">
-                    <h3 className="purecounter">{item.number}</h3>
+                    <h3>{item.number}</h3>
                     <p>{item.label}</p>
                   </div>
                 </div>

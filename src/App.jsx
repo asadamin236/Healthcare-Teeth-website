@@ -8,6 +8,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Doctors from "./components/Doctors";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/hero" element-{<Hero/>} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/doctors" element={<Doctors />} />

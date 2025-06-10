@@ -158,7 +158,7 @@ const Footer = () => {
             . All Rights Reserved
           </p>
           <p className="mb-0">
-            Designed with ❤️ by{" "}
+            Designed by{" "}
             <a
               href="https://www.linkedin.com/in/asadamin/"
               target="_blank"

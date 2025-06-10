@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -48,14 +47,37 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            <li className="nav-item ms-lg-3">
+
+            {/* Dropdown Button */}
+            <li className="nav-item dropdown ms-lg-3">
               <button
-                className="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#appointmentModal"
+                className="btn btn-primary dropdown-toggle"
+                id="navbarDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-                Book Appointment
+                Options
               </button>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <button
+                    className="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#appointmentModal"
+                  >
+                    Book Appointment
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addDoctorModal"
+                  >
+                    Add Doctor
+                  </button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
