@@ -34,13 +34,12 @@ const Hero = () => {
             <h3 className="hero-subtitle">
               Advanced care for your perfect smile — from trusted professionals.
             </h3>
-            <button
+            <a
+              href="#appointmentForm"
               className="btn btn-primary btn-lg mt-4 hero-cta"
-              data-bs-toggle="modal"
-              data-bs-target="#appointmentModal"
             >
               Book Appointment
-            </button>
+            </a>
           </div>
 
           <div className="row">

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-section {
   position: relative;
   background-image: url('https://bootstrapmade.com/content/demo/Medilab/assets/img/hero-bg.jpg');
@@ -9,7 +13,7 @@
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.0); /* overlay for text contrast */
+  background-color: rgba(0, 0, 0, 0.0); /* Transparent overlay */
   padding: 80px 0;
 }
 
@@ -34,7 +38,6 @@
   border-radius: 8px;
   background-color: #28a745;
   border: none;
-  /* transition: background-color 0.3s ease; */
 }
 
 .hero-cta:hover {

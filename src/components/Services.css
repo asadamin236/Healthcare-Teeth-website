@@ -25,7 +25,7 @@
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px; /* Slightly increased spacing */
+  gap: 28px;
 }
 
 /* Individual Service Card */
@@ -37,7 +37,7 @@
   border: 1px solid #e4e4e4;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
-  margin-bottom: 10px; /* For breathing space on smaller screens */
+  margin-bottom: 10px;
 }
 
 /* Hover Effects */
@@ -52,6 +52,12 @@
   font-size: 42px;
   color: #0d6efd;
   margin-bottom: 18px;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Optional Animation on Icon Hover */
+.service-card.hovered .icon {
+  transform: scale(1.2) rotate(10deg);
 }
 
 /* Title Styling */
