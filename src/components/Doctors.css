@@ -1,22 +1,64 @@
-.doctor-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Global font setup */
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Section Heading */
+#doctors h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Subtext under heading */
+#doctors p.text-muted {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Doctor card */
+.doctor-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+/* Card hover effect */
 .doctor-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Doctor image */
 .doctor-img {
   width: 120px;
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #0d6efd;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
   display: block;
 }
 
-* {
-  font-family: 'Poppins', sans-serif;
+/* Doctor name */
+.doctor-card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Specialty */
+.doctor-card p.text-primary {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Description */
+.doctor-card p.text-muted.small {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
 }

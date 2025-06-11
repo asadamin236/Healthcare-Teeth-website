@@ -7,17 +7,58 @@
   margin-top: 40px;
   text-align: center;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 .containers {
   margin-top: 100px;
 }
-* {
-  font-family: 'Poppins', sans-serif;
+/* Section Headings */
+#about h2,
+#stats h2 {
+  font-size: 2rem;
+  font-weight: 700;
 }
-a {
-  font-family: 'Poppins', sans-serif;
+
+/* Subtext below headings */
+#about h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
 }
-p {
-  font-family: 'Poppins', sans-serif;
+
+/* Strong titles for each feature point */
+#about strong {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Description under each feature */
+#about h6 + h6 {
+  font-size: 1rem;
+  margin-top: 5px;
+  font-weight: 400;
+  color: #555;
+}
+
+/* Stats Section */
+.stats-item-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.stats-item-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Optional: icon wrapper spacing */
+.icon-wrapper {
+  margin-bottom: 10px;
 }
 
 .custom-stats-section .icon-wrapper {

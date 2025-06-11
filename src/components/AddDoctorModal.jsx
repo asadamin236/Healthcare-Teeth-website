@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddDoctorModal.css";
 
 const AddDoctorModal = ({ addDoctor }) => {
   const [formData, setFormData] = useState({

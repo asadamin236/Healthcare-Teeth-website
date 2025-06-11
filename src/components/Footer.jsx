@@ -160,7 +160,7 @@ const Footer = () => {
           <p className="mb-0">
             Designed by{" "}
             <a
-              href="https://www.linkedin.com/in/asadamin/"
+              href="https://www.linkedin.com/in/asad-amin-701329294/"
               target="_blank"
               rel="noopener noreferrer"
               style={{

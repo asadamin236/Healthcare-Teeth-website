@@ -1,13 +1,78 @@
-.containers {
-  margin-top: 50px;
-}
-
+/* Base font */
 * {
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
-a {
-  font-family: 'Poppins', sans-serif;
+
+.containers {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
-p {
-  font-family: 'Poppins', sans-serif;
+
+/* Section heading */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 30px;
+}
+
+/* Labels */
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Input fields */
+.form-control {
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Submit button */
+button.btn-primary {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+/* Right-side contact details */
+.col-md-6 p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0 15px 0;
+}
+
+.col-md-6 strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.col-md-6 svg {
+  color: #0d6efd;
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 1.1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .containers {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AppointmentModal.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -19,7 +20,7 @@ const AppointmentModal = () => {
     e.preventDefault();
 
     const scriptURL = import.meta.env.VITE_SHEETBEST_URL;
-    const apiKey = import.meta.env.VITE_SHEETBEST_API_KEY;  
+    const apiKey = import.meta.env.VITE_SHEETBEST_API_KEY;
     // Uncomment below line if your sheet is private
     // const apiKey = import.meta.env.VITE_SHEETBEST_API_KEY;
 
@@ -30,8 +31,6 @@ const AppointmentModal = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // Only include the Authorization header if your sheet is private
-          // Authorization: `Bearer ${apiKey}`,
         },
         body: JSON.stringify(formData),
       });
@@ -85,6 +84,7 @@ const AppointmentModal = () => {
                   type="text"
                   className="form-control"
                   name="name"
+                  placeholder="Enter your full name"
                   required
                   value={formData.name}
                   onChange={handleChange}

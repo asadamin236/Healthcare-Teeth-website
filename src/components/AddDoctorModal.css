@@ -1,0 +1,49 @@
+/* Modal heading */
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Input fields */
+.form-control {
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Textarea spacing */
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Modal footer button */
+.modal-footer .btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Add some spacing between inputs */
+.modal-body .form-control {
+  margin-bottom: 10px;
+}

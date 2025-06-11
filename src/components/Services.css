@@ -1,12 +1,14 @@
-/* Font globally */
+/* Global Font and Box Sizing */
 *,
 *::before,
 *::after {
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Container Layout */
+/* Section Wrapper */
 .services-container-wrapper {
   padding: 60px 20px;
   background-color: #f8f9fa;
@@ -16,19 +18,20 @@
   font-size: 2rem;
   font-weight: 700;
   color: #333;
+  margin-bottom: 40px;
 }
 
-/* Grid Layout */
+/* Grid Container */
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
 
-/* Card Base */
+/* Individual Service Card */
 .service-card {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 25px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -36,39 +39,48 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Hover Effect */
+/* Hover Effects */
 .service-card:hover,
 .service-card.hovered {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 
-/* Icon Style */
+/* Icon Styling */
 .service-card .icon {
-  font-size: 40px;
+  font-size: 42px;
   color: #0d6efd;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
-/* Text Styles */
+/* Title Styling */
 .service-card h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #333;
+  color: #222;
 }
 
+/* Description Styling */
 .service-card p {
   font-size: 0.95rem;
-  color: #666;
-  line-height: 1.5;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-container-wrapper {
+    padding: 40px 15px;
+  }
+
+  .services-heading {
+    font-size: 1.5rem;
+  }
+
   .service-card {
-    padding: 20px 15px;
+    padding: 20px;
   }
 
   .service-card h3 {
